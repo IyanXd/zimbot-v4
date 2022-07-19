@@ -172,10 +172,10 @@ return dDisplay + hDisplay + mDisplay + sDisplay;
 
 
 const reply = (teks) => {
-    ZimBotInc.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "𝕴𝖞𝖆𝖓𝕸𝖉",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, detectLinks: true,body: "𝕴𝖞𝖆𝖓𝕸𝖉", thumbnail: fs.readFileSync('./drips.jpg'),sourceUrl: ("https://youtu.be/KNu-gr2h7bo")}}})
+    ZimBotInc.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "𝕴𝖞𝖆𝖓𝕸𝖉",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, detectLinks: true,body: "𝕴𝖞𝖆𝖓𝕸𝖉", thumbnail: fs.readFileSync('./drips.jpg'),sourceUrl: ("https://youtu.be/Y5shyYOUIuw")}}})
 }
 const replay = (teks) => {
-    ZimBotInc.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "𝕴𝖞𝖆𝖓𝕸𝖉",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, body: "𝕴𝖞𝖆𝖓𝕸𝖉", thumbnail: fs.readFileSync('./drips.jpg'),sourceUrl: ("https://youtu.be/KNu-gr2h7bo")}}})
+    ZimBotInc.sendMessage(m.chat, {text: teks, contextInfo: {"externalAdReply": {title: "𝕴𝖞𝖆𝖓𝕸𝖉",mediaType: 3, renderLargerThumbnail: false, showAdAttribution: true, body: "𝕴𝖞𝖆𝖓𝕸𝖉", thumbnail: fs.readFileSync('./drips.jpg'),sourceUrl: ("https://youtu.be/Y5shyYOUIuw")}}})
 }
 
 const drip =  {
@@ -1177,7 +1177,7 @@ setInterval(() => {
 //But5Loc
 var nextMinutes = Math.random() * 300 + 30;
 setTimeout(function(){
-  ZimBotInc.sendMessage(ZimBotInc.user.id, {text: `*IYAN BOT INC ANNOUNCEMENT:* *FOLLOW IG TO yanxd81*\n\n*GITHUB:* https://github.com/IyanXd\n\n*NEW FEATURES COMING SOON SO STAY TUNED*\n\n*FEEL FREE TO BRING IDEAS OF THE FEATURES ON THE TABLE*\n\n*IF YOU WANT TO CONTRUBUTE FORK THE REPO, MAKE CHANGES PUSH YOUR CHANGES TO THE ORIGIN BRANCH AND WAIT FOR YOUR PULL REQUEST TO BE VERIFIED*\n\n*Thanks for choosing zim-bot*`,contextInfo: { externalAdReply:{title:"𝕴𝖞𝖆𝖓𝕸𝖉",body:"𝕴𝖞𝖆𝖓𝕸𝖉",showAdAttribution: true,mediaType:2,thumbnail: fs.readFileSync(`./drips.jpg`) ,mediaUrl:`https://youtu.be/KNu-gr2h7bo`, sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+  ZimBotInc.sendMessage(ZimBotInc.user.id, {text: `*IYAN BOT INC ANNOUNCEMENT:* *FOLLOW IG TO yanxd81*\n\n*GITHUB:* https://github.com/IyanXd\n\n*NEW FEATURES COMING SOON SO STAY TUNED*\n\n*FEEL FREE TO BRING IDEAS OF THE FEATURES ON THE TABLE*\n\n*IF YOU WANT TO CONTRUBUTE FORK THE REPO, MAKE CHANGES PUSH YOUR CHANGES TO THE ORIGIN BRANCH AND WAIT FOR YOUR PULL REQUEST TO BE VERIFIED*\n\n*Thanks for choosing zim-bot*`,contextInfo: { externalAdReply:{title:"𝕴𝖞𝖆𝖓𝕸𝖉",body:"𝕴𝖞𝖆𝖓𝕸𝖉",showAdAttribution: true,mediaType:2,thumbnail: fs.readFileSync(`./drips.jpg`) ,mediaUrl:`https://youtu.be/Y5shyYOUIuw`, sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
   //anouncement by drips 
 }, nextMinutes * 300 * 1000);
 const send5Butlmg = async (jid , text = '' , footer = '', img, but = [], options = {}) =>{
@@ -2229,8 +2229,8 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
   showAdAttribution: true,
   thumbnail: fs.readFileSync("Zimbot/drips.jpg"),
   mediaType:1,
-  mediaUrl: 'https://youtu.be/KNu-gr2h7bo',
-  sourceUrl: "https://youtu.be/KNu-gr2h7bog"
+  mediaUrl: 'https://youtu.be/Y5shyYOUIuw',
+  sourceUrl: "https://youtu.be/Y5shyYOUIuw"
   }}
   }
   ZimBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -2256,8 +2256,8 @@ Please @${m.mentionedJid[0].split`@`[0]} to type accept/reject`
   showAdAttribution: true,
   thumbnail: fs.readFileSync("Zimbot/drips.jpg"),
   mediaType:1,
-  mediaUrl: 'https://youtu.be/KNu-gr2h7bo',
-  sourceUrl: "https://youtu.be/KNu-gr2h7bog"
+  mediaUrl: 'https://youtu.be/Y5shyYOUIuw',
+  sourceUrl: "https://youtu.be/Y5shyYOUIuw"
   }}
   }
   ZimBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -3312,7 +3312,7 @@ if (!regex1.test(args[0])) throw 'link!'
       mediaType:2,
       thumbnail: fs.readFileSync('./drips.jpg'),
       mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-      sourceUrl: `https://youtu.be/KNu-gr2h7bo`,
+      sourceUrl: `https://youtu.be/Y5shyYOUIuw`,
       }}
       })
  
@@ -3331,8 +3331,8 @@ if (!regex1.test(args[0])) throw 'link!'
         showAdAttribution: true,
         mediaType:2,
         thumbnail: fs.readFileSync(`./drips.jpg`) ,
-        mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-        sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+        mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+        sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 break
 case 'ghsearch': 
        case 'githubsearch': 
@@ -3794,8 +3794,8 @@ replay(mess.wait)
  showAdAttribution: true,
  thumbnail: global.thumb,
  mediaType:2,
- mediaUrl: `https://youtu.be/KNu-gr2h7bo`,
- sourceUrl: `https://youtu.be/KNu-gr2h7bo`
+ mediaUrl: `https://youtu.be/Y5shyYOUIuw`,
+ sourceUrl: `https://youtu.be/Y5shyYOUIuw`
  }}
  }
  XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -4290,8 +4290,8 @@ body:"IyanGamteng",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: fs.readFileSync(`./drips.jpg`) ,
-mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 }
 break
 case 'audio': {    
@@ -4315,8 +4315,8 @@ body:"IyanGamteng",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: fs.readFileSync(`./drips.jpg`) ,
-mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 }
 break
 case 'ytmp4': case 'ytvideo': {
@@ -4340,8 +4340,8 @@ body:"IyanGamteng",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: fs.readFileSync(`./drips.jpg`) ,
-mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 }
 break
 case 'ytshorts': case 'shorts': {
@@ -4413,8 +4413,8 @@ ZimBotInc.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : ba
   showAdAttribution: true,
   mediaType:2,
   thumbnail: fs.readFileSync(`./drips.jpg`) ,
-  mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+  mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 }
 break
 case 'song': {
@@ -4576,8 +4576,8 @@ case 'fbdl': case 'fb': case 'facebook': case 'fbvideo': {
       showAdAttribution: true,
       mediaType:2,
       thumbnail: fs.readFileSync(`./drips.jpg`) ,
-      mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-      sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+      mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+      sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
      
        
      }
@@ -5585,8 +5585,8 @@ ZimBotInc.sendMessage(m.chat, { image: buf, jpegThumbnail:buf, caption: `PhotoFi
   showAdAttribution: true,
   mediaType:2,
   thumbnail: fs.readFileSync(`./drips.jpg`) ,
-  mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+  mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 }
  
 //----END HERE-------\\
@@ -5718,8 +5718,8 @@ ZimBotInc.sendMessage(m.chat, { image: { url: anu }, caption: `Made by ${global.
   showAdAttribution: true,
   mediaType:2,
   thumbnail: fs.readFileSync(`./drips.jpg`) ,
-  mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+  mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 }
 //----END HERE--------\\
 
@@ -5761,8 +5761,8 @@ ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*PHOTO OXY ${command}*` , 
   showAdAttribution: true,
   mediaType:2,
   thumbnail: fs.readFileSync(`./drips.jpg`) ,
-  mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+  mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 }
 break
 
@@ -5790,8 +5790,8 @@ ZimBotInc.sendMessage(m.chat, { image: anu, caption: `*EPHOTO ${command}*` ,  qu
   showAdAttribution: true,
   mediaType:2,
   thumbnail: fs.readFileSync(`./drips.jpg`) ,
-  mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }}}, {quoted: m})
+  mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+sourceUrl: `https://youtu.be/Y5shyYOUIuw` }}}, {quoted: m})
 }
 break
 
@@ -7932,8 +7932,8 @@ anu = `
       showAdAttribution: true,
       mediaType:2,
       thumbnail: fs.readFileSync(`./drips.jpg`) ,
-      mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-    sourceUrl: `https://youtu.be/KNu-gr2h7bo`
+      mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+    sourceUrl: `https://youtu.be/Y5shyYOUIuw`
     }}}, {quoted:m})
     } else if  (setbot.templateMsg) {
       ZimBotInc.send5ButMsg(m.chat, anu, global.botname, btn)
@@ -8013,8 +8013,8 @@ anu = `
         showAdAttribution: true,
         mediaType:2,
         thumbnail: fs.readFileSync('./drips.jpg'),
-        mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
-        sourceUrl: `https://youtu.be/KNu-gr2h7bo`,
+        mediaUrl:`https://youtu.be/Y5shyYOUIuw`, 
+        sourceUrl: `https://youtu.be/Y5shyYOUIuw`,
         }}
         }
         ZimBotInc.sendMessage(m.chat, buttonMessage)
