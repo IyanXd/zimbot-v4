@@ -40,7 +40,7 @@ global.api = (name, path = '/', query = {}, apikeyqueryname) => (name in global.
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 const { say } =  require('cfonts')
 const { color } = require('./lib/color')
-say('ZIM-BOT\nV4', {
+say('IYAN-BOT\nV4', {
     font: '3d',
     colors: ["#0ff",'green',"#ff0"],
     align: 'center',
@@ -52,18 +52,18 @@ say('ZIM-BOT\nV4', {
     maxLenght: '0'
 
   })
-  say(`ZIM-BOT-INC By @${author.name || author}`, {
+  say(`IYAN-BOT-INC By @${author.name || author}`, {
     font: 'console',
     align: 'center',
     gradient: ['red', 'green']
   })
 Drips.hr();
-console.log(color(''), color('THANKS FOR CHOOSING ZIM BOT', 'green'))
-console.log(color(''), color('SCRIPT BY DRIPS', 'red'))
-console.log(color( ''), color('https://wa.me/27634090203','cyan'))
+console.log(color(''), color('THANKS FOR CHOOSING IYAN BOT', 'green'))
+console.log(color(''), color('SCRIPT BY IYAN', 'red'))
+console.log(color( ''), color('https://wa.me/62895323413434','cyan'))
 Drips.hr();
-Drips.banner(`DRIPS ZIM BOT OWNER`)
-Drips.ok('WELCOME TO ZIMBOT')
+Drips.banner(`IYAN BOT OWNER`)
+Drips.ok('WELCOME TO IYANBOT')
 Drips.done('I WROTE THIS SCRIPT BY MYSELF')
 Drips.info('YOU WANNA CONTRUBUTE FEEL FREE TO CONTACT ME, BEING FRIENDLY IS MY LANGUAGE')
 Drips.error('')
@@ -74,7 +74,7 @@ async function startZimBotInc() {
     const ZimBotInc = ZimBotIncConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['SUB DRIPS OFC','Ubuntu','20.0.04'],
+        browser: ['IYANBOT','Ubuntu','20.0.04'],
         auth: state,
         
     })
@@ -135,12 +135,12 @@ async function startZimBotInc() {
                 if (db.chats[m.chat].isWelcome) {//welcome by drips
                 if (anu.action == 'add') {
                 var buffer = await getBuffer(ppuser)
-                var wangu = await getBuffer(picak+'WELCOME CHOMIE')
+                var wangu = await getBuffer(picak+'𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑩𝒓𝒐𝒐')
                 let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                he = `Welcome To ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
+                he = `𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
                 
 let buttons = [
-{buttonId: `halo`, buttonText: {displayText: 'WELCOME'}, type: 1}
+{buttonId: `halo`, buttonText: {displayText: '𝑾𝒆𝒍𝒄𝒐𝒎𝒆'}, type: 1}
 
 ]
 let buttonMessage = {
@@ -148,15 +148,15 @@ document: fs.readFileSync('./lib/tes.xlsx'),
 mimetype: feler,
 jpegThumbnail:buffer,
 mentions: [num],
-fileName: `WELCOME TO ${metadata.subject}`,
+fileName: `𝑾𝒆𝒍𝒄𝒐𝒎𝒆 𝑻𝒐 ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `©ZIM BOT INC 2022`,
+footer: `©𝑰𝒚𝒂𝒏𝑩𝒐𝒕 𝑰𝒏𝒄 2022`,
 buttons: buttons,
 headerType: 4,
 contextInfo: { externalAdReply:{
-title:"ZIM BOT V4",
-body:"SUB DRIPS OFC",
+title:"𝑰𝒚𝒂𝒏𝑩𝒐𝒕 𝑽4",
+body:"𝕴𝖞𝖆𝖓𝕸𝖉",
 showAdAttribution: true,
 mediaType:2,
 thumbnail:wangu,
@@ -169,27 +169,27 @@ ZimBotInc.sendMessage(anu.id, { audio: driphunny, mimetype: 'audio/mp4', ptt: tr
 ZimBotInc.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                     var buffer = await getBuffer(ppuser)
-                    var mhatadzenyu = await getBuffer(picak+'BYE CHOMIE')
+                    var mhatadzenyu = await getBuffer(picak+'𝑮𝒐𝒐𝒅 𝑩𝒚𝒆 𝑩𝒓𝒐𝒐')
                     let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                    he = `He/She is gone bro ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
+                    he = `𝑯𝒆/𝑺𝒉𝒆 𝒊𝒔 𝒈𝒐𝒏𝒆 𝒃𝒓𝒐 ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
                     
 let buttons = [
-{buttonId: `halo`, buttonText: {displayText: 'BYE'}, type: 1}
+{buttonId: `halo`, buttonText: {displayText: '𝑩𝒚𝒆𝒆'}, type: 1}
 ]
 let buttonMessage = {
 document: fs.readFileSync('./lib/tes.xlsx'),
 mimetype: feler,
 jpegThumbnail:buffer,
 mentions: [num],
-fileName: `HE/SHE IS GONE BRO ${metadata.subject}`,
+fileName: `𝑯𝒆/𝑺𝒉𝒆 𝒊𝒔 𝒈𝒐𝒏𝒆 𝒃𝒓𝒐𝒐 ${metadata.subject}`,
 fileLength: 99999999999999,
 caption: he,
-footer: `©ZIM BOT INC 2022`,
+footer: `©𝕴𝖞𝖆𝖓𝕸𝖉`,
 buttons: buttons,
 headerType: 4,
 contextInfo: { externalAdReply:{
-title:"ZIM BOT V4",
-body:"SUB DRIPS OFC",
+title:"𝕴𝖞𝖆𝖓𝕸𝖉",
+body:"𝕴𝖞𝖆𝖓𝕸𝖉",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: mhatadzenyu,
@@ -281,7 +281,7 @@ scheduleGc();
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await ZimBotInc.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nFN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:GitHub: zim-bot\nitem2.X-ABLabel:Follow Me On Github\nitem3.URL:YouTube: Drips\nitem3.X-ABLabel:Youtube\nitem4.ADR:;;Zim, Mizoram;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nFN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:GitHub: IyanXd\nitem2.X-ABLabel:Follow Me On Github\nitem3.URL:Tiktok: yan77\nitem3.X-ABLabel:BotName\nitem4.ADR:;;𝕴𝖞𝖆𝖓𝕸𝖉;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	ZimBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
