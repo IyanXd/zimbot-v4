@@ -32,7 +32,7 @@ exports.jadibot = async (conn, m) => {
         logger: pino({ level: 'silent' }),
         printQRInTerminal: false,
         auth: state,
-		browser: ['ZIM BOT JADI']
+		browser: ['IYAN BOT JADI']
 })
 
 ZimBotInc.ev.on('connection.update', async (update) => {
