@@ -7262,7 +7262,6 @@ ram2 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.
 timestampe = speed();
 latensie = speed() - timestampe
 anu = `
-*ᴜᴘᴛɪᴍᴇ :* ${runtime(process.uptime())}
 
 ┌───〔 *_◉ᴀʙᴏᴜᴛ◉_* 〕
 ┊ *❗ᴏꜱ ʀᴇʟᴇᴀꜱᴇ:* ${os.release()}
@@ -7994,14 +7993,14 @@ anu = `
     }
       var buffer = await getBuffer(ppuser)
       let buttons = [
-        {buttonId: `sc`, buttonText: {displayText: 'Source Code'}, type: 1},
+        {buttonId: `listmenu`, buttonText: {displayText: 'List Menu'}, type: 1},
         {buttonId: `owner`, buttonText: {displayText: 'Owner'}, type: 1},
         ]
         let buttonMessage = {
         document: fs.readFileSync('./lib/tes.xlsx'),
         mimetype: dripsee,
         jpegThumbnail:buffer,
-        fileName: `Menu V4`,
+        fileName: `*Runtime* : ${runtime(process.uptime())}`,
         fileLength: 99999999999999,
         caption: anu,
         footer: `©𝕴𝖞𝖆𝖓𝕸𝖉`,
