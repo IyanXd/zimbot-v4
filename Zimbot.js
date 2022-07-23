@@ -5494,7 +5494,6 @@ case 'swm': case 'stickerwm': case 'wm': {
   }
   }
 break
-*
 /*case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
 reply(mess.wait)
 if (!/image/.test(mime)) throw respond
