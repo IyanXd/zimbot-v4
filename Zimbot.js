@@ -7188,7 +7188,7 @@ case 'setmenu': {
 ┊ *❕Os Type:*   ${os.type()}
 ┊ *❗Directory:*  ${os.homedir()}
 ┊ *❕Speed :* ${latensie.toFixed(4)} Second
-┊ *❕Ram Usage :* ${ram9000}
+┊ *❕Ram Usage :* ${ram2}
 ┊ *❗Platlform :* ${os.platform()} 
 ┊ *❗Free Memory:* ${os.freemem()}
 ┊ *❕Total Memory:* ${os.totalmem()}
@@ -7280,7 +7280,7 @@ anu = `
 ┊ *❕Os Type:*   ${os.type()}
 ┊ *❗Directory:*  ${os.homedir()}
 ┊ *❕Speed :* ${latensie.toFixed(4)} Second
-┊ *❕Ram Usage :* ${ram9000}
+┊ *❕Ram Usage :* ${ram2}
 ┊ *❗Platlform :* ${os.platform()} 
 ┊ *❗Free Memory:* ${os.freemem()}
 ┊ *❕Total Memory:* ${os.totalmem()}
@@ -8422,7 +8422,7 @@ anu =`
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram22}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8876,7 +8876,7 @@ case 'searchmenu':{
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram200}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8948,7 +8948,7 @@ anu =`
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram250}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
