@@ -500,7 +500,7 @@ var DADYDR = `
 
  ┌───〔 *_ᴛʜᴀɴᴋs ᴛᴏ_* 〕
  ┊ʏᴏᴜʀ ᴄʀᴇᴅɪᴛꜱ
- └───〔 *_ᴢɪᴍ ʙᴏᴛ ɪɴᴄ_* 〕
+ └───〔 *_ʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
  `
 let message = await prepareWAMessageMedia({ image: bufu, jpegThumbnail:bufu }, { upload: ZimBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -6936,12 +6936,12 @@ return cpu
    neww = performance.now()
    oldd = performance.now()
    respon = `
-*𝑹𝒆𝒔𝒑𝒐𝒏𝒔𝒆 𝑺𝒑𝒆𝒆𝒅* ${latensi.toFixed(4)} *SECONDS \n ${oldd - neww} _miliseconds_\n\n*RUNTIME* : ${runtime(process.uptime())}
+*Response Speed* ${latensi.toFixed(4)} *SECONDS \n ${oldd - neww} _miliseconds_\n\n*RUNTIME* : ${runtime(process.uptime())}
 
-*𝑶𝒄𝒆𝒂𝒏 𝑺𝒆𝒓𝒗𝒆𝒓𝒔*
-*𝑹𝒂𝒎:* ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
+*Ocean Servers*
+*Ram:* ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
 
-*𝑵𝒐𝒅𝒆𝒋𝒔 𝑺𝒆𝒓𝒗𝒆𝒓𝒔*
+*Nodejs Servers*
 ${Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${formatp(used[key])}`).join('\n')}
 
 ${cpus[0] ? `_Total CPU Usage_
@@ -6980,35 +6980,34 @@ ram9000 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Ma
 timestampe = speed();
 latensie = speed() - timestampe
   anu = `
-*ᴜᴘᴛɪᴍᴇ :* ${runtime(process.uptime())}
+*Uptime :* ${runtime(process.uptime())}
 
-┌───〔 *_◉ᴀʙᴏᴜᴛ◉_* 〕
-┊ *❗ᴏꜱ ʀᴇʟᴇᴀꜱᴇ:* ${os.release()}
-┊ *❕ᴏꜱ ᴛʏᴘᴇ:*   ${os.type()}
-┊ *❗ᴅɪʀᴇᴄᴛᴏʀʏ:*  ${os.homedir()}
-┊ *❕ꜱᴘᴇᴇᴅ :* ${latensie.toFixed(4)} Second
-┊ *ʀᴀᴍᴜsᴀɢᴇ :* ${ram9000}
-┊ *❗ᴘʟᴀᴛʟғᴏʀᴍ :* ${os.platform()} 
-┊ *❗ꜰʀᴇᴇ ᴍᴏᴍᴏʀʏ:* ${os.freemem()}
-┊ *❕ᴛᴏᴛᴀʟ ᴍᴇᴍᴏʀʏ:* ${os.totalmem()}
-┊ *❕ᴠᴇʀꜱɪᴏɴ:* ${os.version()}
-┊ *❗ᴅᴇᴠɪᴄᴇ :* ${os.hostname()}
-┊ *❕ᴛᴏᴛᴀʟ ᴜsᴇʀs :* ${Object.keys(global.db.users).length}
+┌───〔 *_◉About◉_* 〕
+┊ *❗Os Realease:* ${os.release()}
+┊ *❕Os Type:*   ${os.type()}
+┊ *❗Directory:*  ${os.homedir()}
+┊ *❕Speed :* ${latensie.toFixed(4)} Second
+┊ *❕Ram Usage :* ${ram9000}
+┊ *❗Platlform :* ${os.platform()} 
+┊ *❗Free Memory:* ${os.freemem()}
+┊ *❕Total Memory:* ${os.totalmem()}
+┊ *❕Version:* ${os.version()}
+┊ *❗Device :* ${os.hostname()}
+┊ *❕Total Users :* ${Object.keys(global.db.users).length}
 └───────────●
   
-┌───〔 *_◉ᴜsᴇʀ ɪɴғᴏ◉_* 〕
-┊ *NAME:* ${pushname}
-┊  ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊ *RANK:* ${role}
-┊ *STATUS:* ${elit}
-┊ *MONEY:* $${(getBalance(sender, balance))}
-┊ *XP:* ${getLevelingXp(sender)}/${reqXp}
-┊ *LEVEL:* ${getLevelingLevel(sender)}
-┊ *MONEY:* $${(getBalance(sender, balance))}
-┊ *GOLD:* ${getEmas(sender)}
-┊ *IRON:* ${getBesi(sender)}
-┊ *FISH:* ${getFish(sender)}
-┊ *DIAMOND:* ${getDm(sender)}
+┌───〔 *_◉User Info◉_* 〕
+┊ *Name:* ${pushname}
+┊ *Number : wa.me/${m.sender.split('@')[0]}
+┊ *Rank:* ${role}
+┊ *Status:* ${elit}
+┊ *Money:* $${(getBalance(sender, balance))}
+┊ *Xp:* ${getLevelingXp(sender)}/${reqXp}
+┊ *Level:* ${getLevelingLevel(sender)}
+┊ *Gold:* ${getEmas(sender)}
+┊ *Iron:* ${getBesi(sender)}
+┊ *Fish:* ${getFish(sender)}
+┊ *Diamond:* ${getDm(sender)}
 └───────────●
 `
 const aliveer = fs.readFileSync('./Zimbot/alive.mp3')
@@ -7182,21 +7181,21 @@ case 'setmenu': {
          title: ``,
          description:
  `
- *ᴜᴘᴛɪᴍᴇ :* ${runtime(process.uptime())}
+ *Uptime :* ${runtime(process.uptime())}
 
- ┌───〔 *_◉ᴀʙᴏᴜᴛ◉_* 〕
- ┊ *❗ᴏꜱ ʀᴇʟᴇᴀꜱᴇ:* ${os.release()}
- ┊ *❕ᴏꜱ ᴛʏᴘᴇ:*   ${os.type()}
- ┊ *❗ᴅɪʀᴇᴄᴛᴏʀʏ:*  ${os.homedir()}
- ┊ *❕ꜱᴘᴇᴇᴅ :* ${latensie.toFixed(4)} Second
- ┊ *ʀᴀᴍᴜsᴀɢᴇ :* ${ram2}
- ┊ *❗ᴘʟᴀᴛʟғᴏʀᴍ :* ${os.platform()} 
- ┊ *❗ꜰʀᴇᴇ ᴍᴏᴍᴏʀʏ:* ${os.freemem()}
- ┊ *❕ᴛᴏᴛᴀʟ ᴍᴇᴍᴏʀʏ:* ${os.totalmem()}
- ┊ *❕ᴠᴇʀꜱɪᴏɴ:* ${os.version()}
- ┊ *❗ᴅᴇᴠɪᴄᴇ :* ${os.hostname()}
- ┊ *❕ᴛᴏᴛᴀʟ ᴜsᴇʀs :* ${Object.keys(global.db.users).length}
- └───────────●
+┌───〔 *_◉About◉_* 〕
+┊ *❗Os Realease:* ${os.release()}
+┊ *❕Os Type:*   ${os.type()}
+┊ *❗Directory:*  ${os.homedir()}
+┊ *❕Speed :* ${latensie.toFixed(4)} Second
+┊ *❕Ram Usage :* ${ram9000}
+┊ *❗Platlform :* ${os.platform()} 
+┊ *❗Free Memory:* ${os.freemem()}
+┊ *❕Total Memory:* ${os.totalmem()}
+┊ *❕Version:* ${os.version()}
+┊ *❗Device :* ${os.hostname()}
+┊ *❕Total Users :* ${Object.keys(global.db.users).length}
+└───────────●
         `,
          buttonText: "SET MENU",
          footerText: "𝕴𝖞𝖆𝖓𝕸𝖉",
@@ -7276,489 +7275,489 @@ timestampe = speed();
 latensie = speed() - timestampe
 anu = `
 
-┌───〔 *_◉ᴀʙᴏᴜᴛ◉_* 〕
-┊ *❗ᴏꜱ ʀᴇʟᴇᴀꜱᴇ:* ${os.release()}
-┊ *❕ᴏꜱ ᴛʏᴘᴇ:*   ${os.type()}
-┊ *❗ᴅɪʀᴇᴄᴛᴏʀʏ:*  ${os.homedir()}
-┊ *❕ꜱᴘᴇᴇᴅ :* ${latensie.toFixed(4)} Second
-┊ *ʀᴀᴍᴜsᴀɢᴇ :* ${ram2}
-┊ *❗ᴘʟᴀᴛʟғᴏʀᴍ :* ${os.platform()} 
-┊ *❗ꜰʀᴇᴇ ᴍᴏᴍᴏʀʏ:* ${os.freemem()}
-┊ *❕ᴛᴏᴛᴀʟ ᴍᴇᴍᴏʀʏ:* ${os.totalmem()}
-┊ *❕ᴠᴇʀꜱɪᴏɴ:* ${os.version()}
-┊ *❗ᴅᴇᴠɪᴄᴇ :* ${os.hostname()}
-┊ *❕ᴛᴏᴛᴀʟ ᴜsᴇʀs :* ${Object.keys(global.db.users).length}
+┌───〔 *_◉About◉_* 〕
+┊ *❗Os Realease:* ${os.release()}
+┊ *❕Os Type:*   ${os.type()}
+┊ *❗Directory:*  ${os.homedir()}
+┊ *❕Speed :* ${latensie.toFixed(4)} Second
+┊ *❕Ram Usage :* ${ram9000}
+┊ *❗Platlform :* ${os.platform()} 
+┊ *❗Free Memory:* ${os.freemem()}
+┊ *❕Total Memory:* ${os.totalmem()}
+┊ *❕Version:* ${os.version()}
+┊ *❗Device :* ${os.hostname()}
+┊ *❕Total Users :* ${Object.keys(global.db.users).length}
+└───────────●
+  
+┌───〔 *_◉User Info◉_* 〕
+┊ *Name:* ${pushname}
+┊ *Number : wa.me/${m.sender.split('@')[0]}
+┊ *Rank:* ${role}
+┊ *Status:* ${elit}
+┊ *Money:* $${(getBalance(sender, balance))}
+┊ *Xp:* ${getLevelingXp(sender)}/${reqXp}
+┊ *Level:* ${getLevelingLevel(sender)}
+┊ *Gold:* ${getEmas(sender)}
+┊ *Iron:* ${getBesi(sender)}
+┊ *Fish:* ${getFish(sender)}
+┊ *Diamond:* ${getDm(sender)}
 └───────────●
 
-┌───〔 *_◉ᴜsᴇʀ ɪɴғᴏ◉_* 〕
-┊ *NAME:* ${pushname}
-┊  ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊ *RANK:* ${role}
-┊ *STATUS:* ${elit}
-┊ *MONEY:* $${(getBalance(sender, balance))}
-┊ *XP:* ${getLevelingXp(sender)}/${reqXp}
-┊ *LEVEL:* ${getLevelingLevel(sender)}
-┊ *MONEY:* $${(getBalance(sender, balance))}
-┊ *GOLD:* ${getEmas(sender)}
-┊ *IRON:* ${getBesi(sender)}
-┊ *FISH:* ${getFish(sender)}
-┊ *DIAMOND:* ${getDm(sender)}
+┌───〔 *_◉MenuSimple◉_* 〕
+┊༒︎downloadmenu
+┊༒︎groupmenu
+┊༒︎animemenu
+┊༒︎searchmenu
+┊༒︎ownermenu
+┊༒︎databasemenu
+┊༒︎textpromenu
+┊༒︎ephotomenu
+┊༒︎toolsmenu
+┊༒︎convertmenu
 └───────────●
 
-┌───〔 *_◉ᴍᴇɴᴜ◉_* 〕
-┊🪨downloadmenu
-┊🪨groupmenu
-┊🪨animemenu
-┊🪨searchmenu
-┊🪨ownermenu
-┊🪨databasemenu
-┊🪨textpromenu
-┊🪨ephotomenu
-┊🪨toolsmenu
-┊🪨convertmenu
+┌───〔 *_◉ToolsMenu◉_* 〕
+┊༒︎ip ->-
+┊༒︎ipdomain -domain name-
+┊༒︎codecolor -text-
+┊༒︎hackermaker -pic url-
+┊༒︎checknumber -number-
+┊༒︎veriphone -number-
+┊༒︎weather -place-
+┊༒︎attp -text-
+┊༒︎ssweb-hp -url-
+┊༒︎shortlink -url-
+┊༒︎ssweb-pc -url-
+┊༒︎shortlinkcuttly -url-
+┊༒︎shortlinkisgd -url-
+┊༒︎brainly -query-
+└───〔 *_IYAN BOT INC_* 〕
+
+
+┌───〔 *_◉OwnerMenu◉_* 〕
+┊༒︎chatbot on/off
+┊༒︎setmenu -option-
+┊༒︎checkupdate 
+┊༒︎updatenow
+┊༒︎bc -text-
+┊༒︎bcall -text-
+┊༒︎bctext -text-
+┊༒︎bcvideo -media-
+┊༒︎bcaudio -media-
+┊༒︎bcimage -media-
+┊༒︎bcloc  -text-
+┊༒︎bcgc -text-
+┊༒︎lockcmd
+┊༒︎setstatus -text-
+┊༒︎setppbot -owner-
+┊༒︎block -owner-
+┊༒︎unblock -owner-
+┊༒︎join -owner-
+┊༒︎leave -owner-
+┊༒︎chat -owner-
+┊༒︎public
+┊༒︎self
+┊༒︎grouponly
+└───〔 *_IYAN BOT INC_* 〕
+
+
+┌───〔 *_◉GrupMenu◉_* 〕
+┊༒︎add -admin-
+┊༒︎kick -admin-
+┊༒︎welcome on/off -admin-
+┊༒︎listpc 
+┊༒︎listgc
+┊༒︎groupinfo -admin-
+┊༒︎antivn -admin-
+┊༒︎antiphoto -admin-
+┊༒︎antisticker -admin-
+┊༒︎antivideo -admin-
+┊༒︎antilinkall -admin-
+┊༒︎antiinstagram -admin-
+┊༒︎antitelegram -admin-
+┊༒︎antilink -admin-
+┊༒︎antiyt -admin-
+┊༒︎antibule -admin-
+┊༒︎antitiktok -admin-
+┊༒︎antifacebook -admin-
+┊༒︎antivirus -admin-
+┊༒︎antibadword -admin-
+┊༒︎antiwame -admin-
+┊༒︎group -options-
+┊༒︎mute
+┊༒︎groupinfo
+┊༒︎truth 
+┊༒︎dare
+┊༒︎slot
+┊༒︎math
+┊༒︎vote
+┊༒︎devote
+┊༒︎cekvote
+┊༒︎deletevote
+┊༒︎upvote
+┊༒︎setsubject -admin-
+┊༒︎setdesc -admin-
+┊༒︎setppgroup -admin-
+┊༒︎tagall -admin-
+┊༒︎hidetag -admin-
+┊༒︎ephemeral
+┊༒︎demote -admin-
+┊༒︎promote -admin-
+┊༒︎editinfo -admin-
+└───〔 *_IYAN BOT INC_* 〕
+
+
+┌───〔 *_◉TextProMenu◉_* 〕
+┊༒︎candy -text-
+┊༒︎christmas -text-
+┊༒︎3dchristmas -text-
+┊༒︎sparklechristmas -text-
+┊༒︎deepsea -text-
+┊༒︎scifi -text-
+┊༒︎rainbow2 -text-
+┊༒︎waterpipe -text-
+┊༒︎spooky -text-
+┊༒︎pencil -text-
+┊༒︎circuit -text-
+┊༒︎discovery -text-
+┊༒︎metalic -text-
+┊༒︎fiction -text-
+┊༒︎demon -text-
+┊༒︎transformer -text-
+┊༒︎berry -text-
+┊༒︎thunder -text-
+┊༒︎3dstone2 -text-
+┊༒︎neonlight -text-
+┊༒︎glitch -text-
+┊༒︎harrypotter -text-
+┊༒︎brokenglass -text-
+┊༒︎papercut -text-
+┊༒︎watercolor -text-
+┊༒︎multicolor -text-
+┊༒︎neondevil -text-
+┊༒︎underwater -text-
+┊༒︎graffitibike -text-
+┊༒︎snow -text-
+┊༒︎cloud -text-
+┊༒︎honey -text-
+┊༒︎ice -text-
+┊༒︎fruitjuice -text-
+┊༒︎biscuit -text-
+┊༒︎wood -text-
+┊༒︎chocolate -text-
+┊༒︎strawberry -text-
+┊༒︎matrix -text-
+┊༒︎blood -text-
+┊༒︎dropwater -text-
+┊༒︎toxic -text-
+┊༒︎lava -text-
+┊༒︎rock -text-
+┊༒︎bloodglass -text-
+┊༒︎halloween -text-
+┊༒︎darkgold -text-
+┊༒︎joker -text-
+┊༒︎wicker -text-
+┊༒︎firework -text-
+┊༒︎skeleton -text-
+┊༒︎blackpink -text-
+┊༒︎sand -text-
+┊༒︎glue -text-
+┊༒︎1917 -text-
+┊༒︎leaves -text-
+└───〔 *_IYAN BOT INC_* 〕
+
+
+┌───〔 *_◉DownloadMenu◉_* 〕
+┊༒︎ytmp3 -link-
+┊༒︎ytmp4 -link-
+┊༒︎audio  -link-
+┊༒︎play -query-
+┊༒︎song -query-
+┊༒︎play2 -query-
+┊༒︎mediafire -link-
+┊༒︎fb -link-
+┊༒︎fb2 -link-
+┊༒︎ytsvideo -query-
+┊༒︎getmusic -query-
+┊༒︎getvideo -query-
+┊༒︎savefrom -query-
+┊༒︎pindl -query-
+┊༒︎joox -query-
+┊༒︎tiktok -link-
+┊༒︎tiktok2 -link-
+┊༒︎twitter -link-
+┊༒︎twitter2 -link-
+┊༒︎tiktok3 -link-
+┊༒︎tiktok4 -link-
+┊༒︎ig -link-
+┊༒︎instagramstory -link-
+┊༒︎instagramstory2 -link-
+┊༒︎igimage -link-
+┊༒︎instagramreal -link-
+┊༒︎soundcloud -link-
+┊༒︎ytshorts -link-
+┊༒︎unma -link-
+┊༒︎twitteraudio -link-
+┊༒︎ytsaudio -query-
+┊༒︎ytsvideo -query-
+┊༒︎yts2 -query-
+┊༒︎fbdl -link-
+┊༒︎fbvideo -link-
+┊༒︎get -link-
+┊༒︎tiktok5 -link-
+┊༒︎titktok3 -link-
+┊༒︎tiktokmp3 -link-
+┊༒︎ttmp3 -link-
+┊༒︎ig2 -link-
+┊༒︎git -link-
+┊༒︎ig3 -link-
+┊༒︎igimage -link-
+┊༒︎igtv -link-
+┊༒︎fbmp3 -link-
+┊༒︎ytdl -link-
+└───〔 *_IYAN BOT INC_* 〕
+
+
+┌───〔 *_◉PhotFilterMenu◉_* 〕
+┊༒︎angie -photo-
+┊༒︎aria -photo-
+┊༒︎attic -photo-
+┊༒︎blackandwhite -photo-
+┊༒︎chorme1977 -photo-
+┊༒︎constrastbandw -photo-
+┊༒︎creamy -photo-
+┊༒︎duotone -photo-
+┊༒︎eva -photo-
+┊༒︎goldenhour -photo-
+┊༒︎hana -photo-
+┊༒︎lavander -photo-
+┊༒︎lemonande -photo-
+┊༒︎lightleak -photo-
+┊༒︎lisa -photo-
+┊༒︎lomo -photo-
+┊༒︎milk -photo-
+┊༒︎molly -photo-
+┊༒︎monochrome -photo-
+┊༒︎morning -photo-
+┊༒︎movie -photo-
+┊༒︎orton -photo-
+┊༒︎paretro -photo-
+┊༒︎perfectbandw -photo-
+┊༒︎plumy -photo-
+┊༒︎retrolga -photo-
+┊༒︎ruby -photo-
+┊༒︎sand -photo-
+┊༒︎sapphire -photo-
+┊༒︎sepia -photo-
+┊༒︎softsepia -photo-
+┊༒︎solarize -photo-
+┊༒︎sphinx -photo-
+┊༒︎venus -photo-
+┊༒︎japanese -photo-
+┊༒︎hdr -photo-
+┊༒︎viewfilter -photo-
+┊༒︎warmsunset -photo-
+└───〔 *_IYAN BOT INC_* 〕
+
+
+┌───〔 *_◉NsfwMenu◉_* 〕
+┊༒︎masturbation
+┊༒︎jahy
+┊༒︎hentai
+┊༒︎glasses
+┊༒︎gangbang
+┊༒︎foot
+┊༒︎femdom
+┊༒︎cum
+┊༒︎ero
+┊༒︎cuckhold
+┊༒︎blowjob
+┊༒︎bdsm
+┊༒︎ahegao
+┊༒︎ass
+┊༒︎orgy
+┊༒︎panties
+┊༒︎pussy
+┊༒︎yuri
+┊༒︎thighs
+┊༒︎tentacles
+└───〔 *_IYAN BOT INC_* 〕
+
+
+┌───〔 *_◉AnimeMenu◉_* 〕
+┊༒︎cry
+┊༒︎kill
+┊༒︎hug
+┊༒︎pat
+┊༒︎lick
+┊༒︎kiss
+┊༒︎bite
+┊༒︎yeet
+┊༒︎neko
+┊༒︎bully
+┊༒︎bonk
+┊༒︎wink
+┊༒︎poke
+┊༒︎nom
+┊༒︎slap
+┊༒︎smile
+┊༒︎wave
+┊༒︎awoo
+┊༒︎blush
+┊༒︎smug
+┊༒︎glomp
+┊༒︎happy
+┊༒︎dance
+┊༒︎cringe
+┊༒︎cuddle
+┊༒︎highfive
+┊༒︎shinobu
+┊༒︎megumin
+┊༒︎handhold
+┊༒︎animeslap
+┊༒︎animepat
+┊༒︎animeneko
+┊༒︎animehug
+┊༒︎animekiss
+┊༒︎animewlp
+┊༒︎animespank
+┊༒︎shinobu2
+┊༒︎megumin2
+┊༒︎awoo2
+┊༒︎animewall2
+┊༒︎searchanime -query-
+└───〔 *_IYAN BOT INC_* 〕
+
+
+┌───〔 *_◉SearchMenu◉_* 〕
+┊༒︎lyrics -query-
+┊༒︎linkwa -query-
+┊༒︎apk -query-
+┊༒︎happymod -query-
+┊༒︎apkupro -query-
+┊༒︎༒︎google -query-
+┊༒︎wiki -query-
+┊༒︎ytsearch -query-
+┊༒︎recipe -query-
+┊༒︎playstore -query-
+┊༒︎wikimedia -query-
+┊༒︎news -query-
+┊༒︎༒︎news2 -query-
+┊༒︎animee -query-
+┊༒︎anime -query-
+┊༒︎amino -query-
+┊༒︎googleimage -query-
+┊༒︎apkdone -query-
+┊༒︎githubsearch -query->
+┊༒︎igsearch -username-
+┊༒︎googlenews -query-
+┊༒︎gnews -query-
+┊༒︎wallpaper -query-
+┊༒︎searchgroups -query-
+┊༒︎qoutesanime -query-
+┊༒︎gmsarena -query-
+└───〔 *_IYAN BOT INC_* 〕
+
+┌───〔*_◉Ephoto-Menu◉_*〕
+┊༒︎3d-wood
+┊༒︎angels-wings
+┊༒︎snake-text
+┊༒︎redhot-metal2
+┊༒︎sandsummer-beach
+┊༒︎snow-text
+┊༒︎water-3d
+┊༒︎water-effect
+┊༒︎wet-glass
+┊༒︎status-mood2
+┊༒︎summerysand
 └───────────●
 
-┌───〔 *_ᴛᴏᴏʟᴍᴇɴᴜ_* 〕
-┊🪨ip ->-
-┊🪨ipdomain -domain name-
-┊🪨codecolor -text-
-┊🪨hackermaker -pic url-
-┊🪨checknumber -number-
-┊🪨veriphone -number-
-┊🪨weather -place-
-┊🪨attp -text-
-┊🪨ssweb-hp -url-
-┊🪨shortlink -url-
-┊🪨ssweb-pc -url-
-┊🪨shortlinkcuttly -url-
-┊🪨shortlinkisgd -url-
-┊🪨brainly -query-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉ConvertMenu◉_* 〕
+┊༒︎toimg -quote sticker-
+┊༒︎togif -quote video-
+┊༒︎todocument -media-
+┊༒︎bass -audio-
+┊༒︎blown -audio-
+┊༒︎deep -audio-
+┊༒︎earape -audio-
+┊༒︎fast -audio-
+┊༒︎fat -audio-
+┊༒︎nightcore -audio-
+┊༒︎reverse -audio-
+┊༒︎robot -audio-
+┊༒︎slow -audio-
+┊༒︎smooth -audio-
+┊༒︎squirrel -audio-
+┊༒︎sticker -media-
+┊༒︎smeme -media-
+┊༒︎stickermeme -media-
+┊༒︎swm -sticker-
+└───〔 *_IYAN BOT INC_* 〕
+
+┌───〔 *_◉DatabaseMenu◉_* 〕
+┊༒︎addmsg -msg-
+┊༒︎delmsg -msg-
+┊༒︎listmsg -msg-
+┊༒︎getmsg -msg-
+┊༒︎setcmd -msg-
+┊༒︎delcmd -msg-
+┊༒︎listcmd -msg-
+└───〔 *_IYAN BOT INC_* 〕
+
+┌───〔 *_◉PhotooxyMenu◉_* 〕
+┊༒︎silk -text-
+┊༒︎3dnature -text-
+┊༒︎bevel -text-
+┊༒︎birthdaycake -text-
+┊༒︎burnpaper -text-
+┊༒︎coffee -text-
+┊༒︎coffee-heartcup -text-
+┊༒︎embroiderytext -text-
+┊༒︎flaming -text-
+┊༒︎flowertypo -text-
+┊༒︎funnycup -text-
+┊༒︎fur -text-
+┊༒︎gerbang -text-
+┊༒︎glowrainbow -text-
+┊༒︎gradientavatar -text-
+┊༒︎graffititext -text-
+┊༒︎harrypotter -text-
+┊༒︎lovemessage -text-
+┊༒︎neonlight -text-
+┊༒︎sweetcandy -text-
+┊༒︎summertext -text-
+┊༒︎woodheart -text-
+┊༒︎yellowroses -text-
+┊༒︎wolfmetal -text-
+┊༒︎underwaterocean -text-
+└───〔 *_IYAN BOT INC_* 〕
 
 
-┌───〔 *_◉ᴏᴡɴᴇʀᴍᴇɴᴜ◉_* 〕
-┊🪨chatbot on/off
-┊🪨setmenu -option-
-┊🪨checkupdate 
-┊🪨updatenow
-┊🪨bc -text-
-┊🪨bcall -text-
-┊🪨bctext -text-
-┊🪨bcvideo -media-
-┊🪨bcaudio -media-
-┊🪨bcimage -media-
-┊🪨bcloc  -text-
-┊🪨bcgc -text-
-┊🪨lockcmd
-┊🪨setstatus -text-
-┊🪨setppbot -owner-
-┊🪨block -owner-
-┊🪨unblock -owner-
-┊🪨join -owner-
-┊🪨leave -owner-
-┊🪨chat -owner-
-┊🪨public
-┊🪨self
-┊🪨grouponly
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-
-┌───〔 *_◉ɢʀᴏᴜᴘᴍᴇɴᴜ◉_* 〕
-┊🪨add -admin-
-┊🪨kick -admin-
-┊🪨welcome on/off -admin-
-┊🪨listpc 
-┊🪨listgc
-┊🪨groupinfo -admin-
-┊🪨antivn -admin-
-┊🪨antiphoto -admin-
-┊🪨antisticker -admin-
-┊🪨antivideo -admin-
-┊🪨antilinkall -admin-
-┊🪨antiinstagram -admin-
-┊🪨antitelegram -admin-
-┊🪨antilink -admin-
-┊🪨antiyt -admin-
-┊🪨antibule -admin-
-┊🪨antitiktok -admin-
-┊🪨antifacebook -admin-
-┊🪨antivirus -admin-
-┊🪨antibadword -admin-
-┊🪨antiwame -admin-
-┊🪨group -options-
-┊🪨mute
-┊🪨groupinfo
-┊🪨truth 
-┊🪨dare
-┊🪨slot
-┊🪨math
-┊🪨vote
-┊🪨devote
-┊🪨cekvote
-┊🪨deletevote
-┊🪨upvote
-┊🪨setsubject -admin-
-┊🪨setdesc -admin-
-┊🪨setppgroup -admin-
-┊🪨tagall -admin-
-┊🪨hidetag -admin-
-┊🪨ephemeral
-┊🪨demote -admin-
-┊🪨promote -admin-
-┊🪨editinfo -admin-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-
-┌───〔 *_◉ᴛᴇxᴛᴘʀᴏᴍᴇɴᴜ◉_* 〕
-┊🪨candy -text-
-┊🪨christmas -text-
-┊🪨3dchristmas -text-
-┊🪨sparklechristmas -text-
-┊🪨deepsea -text-
-┊🪨scifi -text-
-┊🪨rainbow2 -text-
-┊🪨waterpipe -text-
-┊🪨spooky -text-
-┊🪨pencil -text-
-┊🪨circuit -text-
-┊🪨discovery -text-
-┊🪨metalic -text-
-┊🪨fiction -text-
-┊🪨demon -text-
-┊🪨transformer -text-
-┊🪨berry -text-
-┊🪨thunder -text-
-┊🪨3dstone2 -text-
-┊🪨neonlight -text-
-┊🪨glitch -text-
-┊🪨harrypotter -text-
-┊🪨brokenglass -text-
-┊🪨papercut -text-
-┊🪨watercolor -text-
-┊🪨multicolor -text-
-┊🪨neondevil -text-
-┊🪨underwater -text-
-┊🪨graffitibike -text-
-┊🪨snow -text-
-┊🪨cloud -text-
-┊🪨honey -text-
-┊🪨ice -text-
-┊🪨fruitjuice -text-
-┊🪨biscuit -text-
-┊🪨wood -text-
-┊🪨chocolate -text-
-┊🪨strawberry -text-
-┊🪨matrix -text-
-┊🪨blood -text-
-┊🪨dropwater -text-
-┊🪨toxic -text-
-┊🪨lava -text-
-┊🪨rock -text-
-┊🪨bloodglass -text-
-┊🪨halloween -text-
-┊🪨darkgold -text-
-┊🪨joker -text-
-┊🪨wicker -text-
-┊🪨firework -text-
-┊🪨skeleton -text-
-┊🪨blackpink -text-
-┊🪨sand -text-
-┊🪨glue -text-
-┊🪨1917 -text-
-┊🪨leaves -text-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-
-┌───〔 *_ᴅᴏᴡɴʟᴏᴀᴅᴍᴇɴᴜ_* 〕
-┊🪨ytmp3 -link-
-┊🪨ytmp4 -link-
-┊🪨audio  -link-
-┊🪨play -query-
-┊🪨song -query-
-┊🪨play2 -query-
-┊🪨mediafire -link-
-┊🪨fb -link-
-┊🪨fb2 -link-
-┊🪨ytsvideo -query-
-┊🪨getmusic -query-
-┊🪨getvideo -query-
-┊🪨savefrom -query-
-┊🪨pindl -query-
-┊🪨joox -query-
-┊🪨tiktok -link-
-┊🪨tiktok2 -link-
-┊🪨twitter -link-
-┊🪨twitter2 -link-
-┊🪨tiktok3 -link-
-┊🪨tiktok4 -link-
-┊🪨ig -link-
-┊🪨instagramstory -link-
-┊🪨instagramstory2 -link-
-┊🪨igimage -link-
-┊🪨instagramreal -link-
-┊🪨soundcloud -link-
-┊🪨ytshorts -link-
-┊🪨unma -link-
-┊🪨twitteraudio -link-
-┊🪨ytsaudio -query-
-┊🪨ytsvideo -query-
-┊🪨yts2 -query-
-┊🪨fbdl -link-
-┊🪨fbvideo -link-
-┊🪨get -link-
-┊🪨tiktok5 -link-
-┊🪨titktok3 -link-
-┊🪨tiktokmp3 -link-
-┊🪨ttmp3 -link-
-┊🪨ig2 -link-
-┊🪨ig3 -link-
-┊🪨igimage -link-
-┊🪨igtv -link-
-┊🪨fbmp3 -link-
-┊🪨ytdl -link-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-
-┌───〔 *_ᴘʜᴏᴛꜰɪʟᴛᴇʀᴍᴇɴᴜ_* 〕
-┊🪨angie -photo-
-┊🪨aria -photo-
-┊🪨attic -photo-
-┊🪨blackandwhite -photo-
-┊🪨chorme1977 -photo-
-┊🪨constrastbandw -photo-
-┊🪨creamy -photo-
-┊🪨duotone -photo-
-┊🪨eva -photo-
-┊🪨goldenhour -photo-
-┊🪨hana -photo-
-┊🪨lavander -photo-
-┊🪨lemonande -photo-
-┊🪨lightleak -photo-
-┊🪨lisa -photo-
-┊🪨lomo -photo-
-┊🪨milk -photo-
-┊🪨molly -photo-
-┊🪨monochrome -photo-
-┊🪨morning -photo-
-┊🪨movie -photo-
-┊🪨orton -photo-
-┊🪨paretro -photo-
-┊🪨perfectbandw -photo-
-┊🪨plumy -photo-
-┊🪨retrolga -photo-
-┊🪨ruby -photo-
-┊🪨sand -photo-
-┊🪨sapphire -photo-
-┊🪨sepia -photo-
-┊🪨softsepia -photo-
-┊🪨solarize -photo-
-┊🪨sphinx -photo-
-┊🪨venus -photo-
-┊🪨japanese -photo-
-┊🪨hdr -photo-
-┊🪨viewfilter -photo-
-┊🪨warmsunset -photo-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-
-┌───〔 *_ɴꜱꜰᴡᴍᴇɴᴜ_* 〕
-┊🪨masturbation
-┊🪨jahy
-┊🪨hentai
-┊🪨glasses
-┊🪨gangbang
-┊🪨foot
-┊🪨femdom
-┊🪨cum
-┊🪨ero
-┊🪨cuckhold
-┊🪨blowjob
-┊🪨bdsm
-┊🪨ahegao
-┊🪨ass
-┊🪨orgy
-┊🪨panties
-┊🪨pussy
-┊🪨yuri
-┊🪨thighs
-┊🪨tentacles
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-
-┌───〔 *_ᴀɴɪᴍᴇᴍᴇɴᴜ_* 〕
-┊🪨cry
-┊🪨kill
-┊🪨hug
-┊🪨pat
-┊🪨lick
-┊🪨kiss
-┊🪨bite
-┊🪨yeet
-┊🪨neko
-┊🪨bully
-┊🪨bonk
-┊🪨wink
-┊🪨poke
-┊🪨nom
-┊🪨slap
-┊🪨smile
-┊🪨wave
-┊🪨awoo
-┊🪨blush
-┊🪨smug
-┊🪨glomp
-┊🪨happy
-┊🪨dance
-┊🪨cringe
-┊🪨cuddle
-┊🪨highfive
-┊🪨shinobu
-┊🪨megumin
-┊🪨handhold
-┊🪨animeslap
-┊🪨animepat
-┊🪨animeneko
-┊🪨animehug
-┊🪨animekiss
-┊🪨animewlp
-┊🪨animespank
-┊🪨shinobu2
-┊🪨megumin2
-┊🪨awoo2
-┊🪨animewall2
-┊🪨searchanime -query-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-
-┌───〔 *_ꜱᴇᴀʀᴄʜᴍᴇɴᴜ_* 〕
-┊🪨lyrics -query-
-┊🪨linkwa -query-
-┊🪨apk -query-
-┊🪨happymod -query-
-┊🪨apkupro -query-
-┊🪨google -query-
-┊🪨wiki -query-
-┊🪨ytsearch -query-
-┊🪨recipe -query-
-┊🪨playstore -query-
-┊🪨wikimedia -query-
-┊🪨news -query-
-┊🪨news2 -query-
-┊🪨animee -query-
-┊🪨anime -query-
-┊🪨amino -query-
-┊🪨googleimage -query-
-┊🪨apkdone -query-
-┊🪨githubsearch -query->
-┊🪨igsearch -username-
-┊🪨googlenews -query-
-┊🪨gnews -query-
-┊🪨wallpaper -query-
-┊🪨searchgroups -query-
-┊🪨qoutesanime -query-
-┊🪨gmsarena -query-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-┌───〔*_◉ᴇᴘʜᴏᴛᴏ-ᴍᴇɴᴜ◉_*〕
-┊🪨3d-wood
-┊🪨angels-wings
-┊🪨snake-text
-┊🪨redhot-metal2
-┊🪨sandsummer-beach
-┊🪨snow-text
-┊🪨water-3d
-┊🪨water-effect
-┊🪨wet-glass
-┊🪨status-mood2
-┊🪨summerysand
+┌───〔 *_◉MenuRpg◉_* 〕
+┊༒︎joinrpg
+┊༒︎quest 
+┊༒︎mining
+┊༒︎mancing
+┊༒︎luckyday
+┊༒︎luckytime
+┊༒︎adventure
+┊༒︎inventori
 └───────────●
 
-┌───〔 *_ᴄᴏɴᴠᴇʀᴛᴍᴇɴᴜ_* 〕
-┊🪨toimg -quote sticker-
-┊🪨togif -quote video-
-┊🪨todocument -media-
-┊🪨bass -audio-
-┊🪨blown -audio-
-┊🪨deep -audio-
-┊🪨earape -audio-
-┊🪨fast -audio-
-┊🪨fat -audio-
-┊🪨nightcore -audio-
-┊🪨reverse -audio-
-┊🪨robot -audio-
-┊🪨slow -audio-
-┊🪨smooth -audio-
-┊🪨squirrel -audio-
-┊🪨sticker -media-
-┊🪨smeme -media-
-┊🪨stickermeme -media-
-┊🪨swm -sticker-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-┌───〔 *_◉ᴅᴀᴛᴀʙᴀꜱᴇᴍᴇɴᴜ◉_* 〕
-┊🪨addmsg -msg-
-┊🪨delmsg -msg-
-┊🪨listmsg -msg-
-┊🪨getmsg -msg-
-┊🪨setcmd -msg-
-┊🪨delcmd -msg-
-┊🪨listcmd -msg-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-┌───〔 *_◉Photooxyᴍᴇɴᴜ◉_* 〕
-┊🪨silk -text-
-┊🪨3dnature -text-
-┊🪨bevel -text-
-┊🪨birthdaycake -text-
-┊🪨burnpaper -text-
-┊🪨coffee -text-
-┊🪨coffee-heartcup -text-
-┊🪨embroiderytext -text-
-┊🪨flaming -text-
-┊🪨flowertypo -text-
-┊🪨funnycup -text-
-┊🪨fur -text-
-┊🪨gerbang -text-
-┊🪨glowrainbow -text-
-┊🪨gradientavatar -text-
-┊🪨graffititext -text-
-┊🪨harrypotter -text-
-┊🪨lovemessage -text-
-┊🪨neonlight -text-
-┊🪨sweetcandy -text-
-┊🪨summertext -text-
-┊🪨woodheart -text-
-┊🪨yellowroses -text-
-┊🪨wolfmetal -text-
-┊🪨underwaterocean -text-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
-
-
-┌───〔 *_◉ᴍᴇɴᴜ ʀᴘɢ◉_* 〕
-┊🪨joinrpg
-┊🪨quest 
-┊🪨mining
-┊🪨mancing
-┊🪨luckyday
-┊🪨luckytime
-┊🪨adventure
-┊🪨inventori
+┌───〔 *_◉FarmRpg◉_* 〕
+┊༒︎killslime
+┊༒︎killgoblin
+┊༒︎killdevil
+┊༒︎killbehemoth
+┊༒︎killdemon
+┊༒︎killdemonking 
 └───────────●
 
-┌───〔 *_◉Fᴀʀᴍ ʀᴘɢ◉_* 〕
-┊🪨killslime
-┊🪨killgoblin
-┊🪨killdevil
-┊🪨killbehemoth
-┊🪨killdemon
-┊🪨killdemonking 
-└───────────●
-
-┌───〔 *_◉Tʀᴀᴅᴇ ʀᴘɢ◉_* 〕
-┊🪨sellikan
-┊🪨sellbesi
-┊🪨sellemas
-┊🪨selldiamond
+┌───〔 *_◉TradeRpg◉_* 〕
+┊༒︎sellikan
+┊༒︎sellbesi
+┊༒︎sellemas
+┊༒︎selldiamond
 └───────────●
 %readmore` 
     let btn = [{
@@ -7973,23 +7972,23 @@ anu = `
     m.chat, 
     {
     text: `
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
-┌───〔 *_◉ᴜsᴇʀ ɪɴғᴏ◉_* 〕
-┊ *ɴᴀᴍᴇ:* ${pushname}
-┊ *ɴᴜᴍʙᴇʀ :* wa.me/${m.sender.split('@')[0]}
-┊ *ʀᴀɴᴋ:* ${role}
-┊ *sᴛᴀᴛᴜs:* ${elit}
-┊ *ᴍᴏɴᴇʏ:* $${(getBalance(sender, balance))}
-┊ *xᴘ:* ${getLevelingXp(sender)}/${reqXp}
-┊ *ʟᴇᴠᴇʟ:* ${getLevelingLevel(sender)}
-┊ *ɢᴏʟᴅ:* ${getEmas(sender)}
-┊ *ɪʀᴏɴ:* ${getBesi(sender)}
-┊ *ғɪsʜ:* ${getFish(sender)}
-┊ *ᴅɪᴀᴍᴏɴᴅ:* ${getDm(sender)}
-┊ *ᴠᴇʀꜱɪᴏɴ:* ${os.version()}
-┊ *ᴛᴏᴛᴀʟ ᴜsᴇʀs:* ${Object.keys(global.db.users).length}
+┌───〔 *_◉User Info◉_* 〕
+┊ *Name:* ${pushname}
+┊ *Number :* wa.me/${m.sender.split('@')[0]}
+┊ *Rank:* ${role}
+┊ *Status:* ${elit}
+┊ *Money:* $${(getBalance(sender, balance))}
+┊ *Xp:* ${getLevelingXp(sender)}/${reqXp}
+┊ *Level:* ${getLevelingLevel(sender)}
+┊ *Gold:* ${getEmas(sender)}
+┊ *Iron:* ${getBesi(sender)}
+┊ *Fish:* ${getFish(sender)}
+┊ *Diamond:* ${getDm(sender)}
+┊ *Version:* ${os.version()}
+┊ *Total Users:* ${Object.keys(global.db.users).length}
 └───────────●
 `,
     footer: `𝕴𝖞𝖆𝖓𝕸𝖉`,
@@ -8038,43 +8037,43 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'OWNER MENU')
 ram3 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram3}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
-┌───〔 *_◉ᴏᴡɴᴇʀᴍᴇɴᴜ◉_* 〕
-┊🪨chatbot on/off
-┊🪨setmenu -option-
-┊🪨checkupdate 
-┊🪨updatenow
-┊🪨bc -text-
-┊🪨bcall -text-
-┊🪨bctext -text-
-┊🪨bcvideo -media-
-┊🪨bcaudio -media-
-┊🪨bcimage -media-
-┊🪨bcloc  -text-
-┊🪨bcgc -text-
-┊🪨lockcmd
-┊🪨setstatus -text-
-┊🪨setppbot -owner-
-┊🪨block -owner-
-┊🪨unblock -owner-
-┊🪨join -owner-
-┊🪨leave -owner-
-┊🪨chat -owner-
-┊🪨public
-┊🪨self
-┊🪨grouponly
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉OwnerMenu◉_* 〕
+┊༒︎chatbot on/off
+┊༒︎setmenu -option-
+┊༒︎checkupdate 
+┊༒︎updatenow
+┊༒︎bc -text-
+┊༒︎bcall -text-
+┊༒︎bctext -text-
+┊༒︎bcvideo -media-
+┊༒︎bcaudio -media-
+┊༒︎bcimage -media-
+┊༒︎bcloc  -text-
+┊༒︎bcgc -text-
+┊༒︎lockcmd
+┊༒︎setstatus -text-
+┊༒︎setppbot -owner-
+┊༒︎block -owner-
+┊༒︎unblock -owner-
+┊༒︎join -owner-
+┊༒︎leave -owner-
+┊༒︎chat -owner-
+┊༒︎public
+┊༒︎self
+┊༒︎grouponly
+└───〔 *_IYAN BOT INC_* 〕
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8106,27 +8105,27 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'DATABASE MENU')
 ram4 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram4}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
-┌───〔 *_◉ᴅᴀᴛᴀʙᴀꜱᴇᴍᴇɴᴜ◉_* 〕
-┊🪨addmsg -msg-
-┊🪨delmsg -msg-
-┊🪨listmsg -msg-
-┊🪨getmsg -msg-
-┊🪨setcmd -msg-
-┊🪨delcmd -msg-
-┊🪨listcmd -msg-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉DatabaseMenu◉_* 〕
+┊༒︎addmsg -msg-
+┊༒︎delmsg -msg-
+┊༒︎listmsg -msg-
+┊༒︎getmsg -msg-
+┊༒︎setcmd -msg-
+┊༒︎delcmd -msg-
+┊༒︎listcmd -msg-
+└───〔 *_IYAN BOT INC_* 〕
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8158,45 +8157,45 @@ case 'photooxymenu': {
   buffer = await getBuffer(picak+'PHOTOOXY MENU')
   ram5 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu = `
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram5}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
-┌───〔 *_◉Photooxyᴍᴇɴᴜ◉_* 〕
-┊🪨silk -text-
-┊🪨3dnature -text-
-┊🪨bevel -text-
-┊🪨birthdaycake -text-
-┊🪨burnpaper -text-
-┊🪨coffee -text-
-┊🪨coffee-heartcup -text-
-┊🪨embroiderytext -text-
-┊🪨flaming -text-
-┊🪨flowertypo -text-
-┊🪨funnycup -text-
-┊🪨fur -text-
-┊🪨gerbang -text-
-┊🪨glowrainbow -text-
-┊🪨gradientavatar -text-
-┊🪨graffititext -text-
-┊🪨harrypotter -text-
-┊🪨lovemessage -text-
-┊🪨neonlight -text-
-┊🪨sweetcandy -text-
-┊🪨summertext -text-
-┊🪨woodheart -text-
-┊🪨yellowroses -text-
-┊🪨wolfmetal -text-
-┊🪨underwaterocean -text-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉PhotooxyMenu◉_* 〕
+┊༒︎silk -text-
+┊༒︎3dnature -text-
+┊༒︎bevel -text-
+┊༒︎birthdaycake -text-
+┊༒︎burnpaper -text-
+┊༒︎coffee -text-
+┊༒︎coffee-heartcup -text-
+┊༒︎embroiderytext -text-
+┊༒︎flaming -text-
+┊༒︎flowertypo -text-
+┊༒︎funnycup -text-
+┊༒︎fur -text-
+┊༒︎gerbang -text-
+┊༒︎glowrainbow -text-
+┊༒︎gradientavatar -text-
+┊༒︎graffititext -text-
+┊༒︎harrypotter -text-
+┊༒︎lovemessage -text-
+┊༒︎neonlight -text-
+┊༒︎sweetcandy -text-
+┊༒︎summertext -text-
+┊༒︎woodheart -text-
+┊༒︎yellowroses -text-
+┊༒︎wolfmetal -text-
+┊༒︎underwaterocean -text-
+└───〔 *_IYAN BOT INC_* 〕
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
   const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8228,62 +8227,62 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'GROUP MENU')
 ram0 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram0}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
-┌───〔 *_◉ɢʀᴏᴜᴘᴍᴇɴᴜ◉_* 〕
-┊🪨add -admin-
-┊🪨kick -admin-
-┊🪨welcome on/off -admin-
-┊🪨listpc 
-┊🪨listgc
-┊🪨groupinfo -admin-
-┊🪨antivn -admin-
-┊🪨antiphoto -admin-
-┊🪨antisticker -admin-
-┊🪨antivideo -admin-
-┊🪨antilinkall -admin-
-┊🪨antiinstagram -admin-
-┊🪨antitelegram -admin-
-┊🪨antilink -admin-
-┊🪨antiyt -admin-
-┊🪨antibule -admin-
-┊🪨antitiktok -admin-
-┊🪨antifacebook -admin-
-┊🪨antivirus -admin-
-┊🪨antibadword -admin-
-┊🪨antiwame -admin-
-┊🪨group -options-
-┊🪨mute
-┊🪨groupinfo
-┊🪨truth 
-┊🪨dare
-┊🪨slot
-┊🪨math
-┊🪨vote
-┊🪨devote
-┊🪨cekvote
-┊🪨deletevote
-┊🪨upvote
-┊🪨setsubject -admin-
-┊🪨setdesc -admin-
-┊🪨setppgroup -admin-
-┊🪨tagall -admin-
-┊🪨hidetag -admin-
-┊🪨ephemeral
-┊🪨demote -admin-
-┊🪨promote -admin-
-┊🪨editinfo -admin-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉GrupMenu◉_* 〕
+┊༒︎add -admin-
+┊༒︎kick -admin-
+┊༒︎welcome on/off -admin-
+┊༒︎listpc 
+┊༒︎listgc
+┊༒︎groupinfo -admin-
+┊༒︎antivn -admin-
+┊༒︎antiphoto -admin-
+┊༒︎antisticker -admin-
+┊༒︎antivideo -admin-
+┊༒︎antilinkall -admin-
+┊༒︎antiinstagram -admin-
+┊༒︎antitelegram -admin-
+┊༒︎antilink -admin-
+┊༒︎antiyt -admin-
+┊༒︎antibule -admin-
+┊༒︎antitiktok -admin-
+┊༒︎antifacebook -admin-
+┊༒︎antivirus -admin-
+┊༒︎antibadword -admin-
+┊༒︎antiwame -admin-
+┊༒︎group -options-
+┊༒︎mute
+┊༒︎groupinfo
+┊༒︎truth 
+┊༒︎dare
+┊༒︎slot
+┊༒︎math
+┊༒︎vote
+┊༒︎devote
+┊༒︎cekvote
+┊༒︎deletevote
+┊༒︎upvote
+┊༒︎setsubject -admin-
+┊༒︎setdesc -admin-
+┊༒︎setppgroup -admin-
+┊༒︎tagall -admin-
+┊༒︎hidetag -admin-
+┊༒︎ephemeral
+┊༒︎demote -admin-
+┊༒︎promote -admin-
+┊༒︎editinfo -admin-
+└───〔 *_IYAN BOT INC_* 〕
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8315,76 +8314,76 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'TEXTPRO MENU')
 ram11 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu = `
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram11}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
-┌───〔 *_◉ᴛᴇxᴛᴘʀᴏᴍᴇɴᴜ◉_* 〕
-┊🪨candy -text-
-┊🪨christmas -text-
-┊🪨3dchristmas -text-
-┊🪨sparklechristmas -text-
-┊🪨deepsea -text-
-┊🪨scifi -text-
-┊🪨rainbow2 -text-
-┊🪨waterpipe -text-
-┊🪨spooky -text-
-┊🪨pencil -text-
-┊🪨circuit -text-
-┊🪨discovery -text-
-┊🪨metalic -text-
-┊🪨fiction -text-
-┊🪨demon -text-
-┊🪨transformer -text-
-┊🪨berry -text-
-┊🪨thunder -text-
-┊🪨3dstone2 -text-
-┊🪨neonlight -text-
-┊🪨glitch -text-
-┊🪨harrypotter -text-
-┊🪨brokenglass -text-
-┊🪨papercut -text-
-┊🪨watercolor -text-
-┊🪨multicolor -text-
-┊🪨neondevil -text-
-┊🪨underwater -text-
-┊🪨graffitibike -text-
-┊🪨snow -text-
-┊🪨cloud -text-
-┊🪨honey -text-
-┊🪨ice -text-
-┊🪨fruitjuice -text-
-┊🪨biscuit -text-
-┊🪨wood -text-
-┊🪨chocolate -text-
-┊🪨strawberry -text-
-┊🪨matrix -text-
-┊🪨blood -text-
-┊🪨dropwater -text-
-┊🪨toxic -text-
-┊🪨lava -text-
-┊🪨rock -text-
-┊🪨bloodglass -text-
-┊🪨halloween -text-
-┊🪨darkgold -text-
-┊🪨joker -text-
-┊🪨wicker -text-
-┊🪨firework -text-
-┊🪨skeleton -text-
-┊🪨blackpink -text-
-┊🪨sand -text-
-┊🪨glue -text-
-┊🪨1917 -text-
-┊🪨leaves -text-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉TextProMenu◉_* 〕
+┊༒︎candy -text-
+┊༒︎christmas -text-
+┊༒︎3dchristmas -text-
+┊༒︎sparklechristmas -text-
+┊༒︎deepsea -text-
+┊༒︎scifi -text-
+┊༒︎rainbow2 -text-
+┊༒︎waterpipe -text-
+┊༒︎spooky -text-
+┊༒︎pencil -text-
+┊༒︎circuit -text-
+┊༒︎discovery -text-
+┊༒︎metalic -text-
+┊༒︎fiction -text-
+┊༒︎demon -text-
+┊༒︎transformer -text-
+┊༒︎berry -text-
+┊༒︎thunder -text-
+┊༒︎3dstone2 -text-
+┊༒︎neonlight -text-
+┊༒︎glitch -text-
+┊༒︎harrypotter -text-
+┊༒︎brokenglass -text-
+┊༒︎papercut -text-
+┊༒︎watercolor -text-
+┊༒︎multicolor -text-
+┊༒︎neondevil -text-
+┊༒︎underwater -text-
+┊༒︎graffitibike -text-
+┊༒︎snow -text-
+┊༒︎cloud -text-
+┊༒︎honey -text-
+┊༒︎ice -text-
+┊༒︎fruitjuice -text-
+┊༒︎biscuit -text-
+┊༒︎wood -text-
+┊༒︎chocolate -text-
+┊༒︎strawberry -text-
+┊༒︎matrix -text-
+┊༒︎blood -text-
+┊༒︎dropwater -text-
+┊༒︎toxic -text-
+┊༒︎lava -text-
+┊༒︎rock -text-
+┊༒︎bloodglass -text-
+┊༒︎halloween -text-
+┊༒︎darkgold -text-
+┊༒︎joker -text-
+┊༒︎wicker -text-
+┊༒︎firework -text-
+┊༒︎skeleton -text-
+┊༒︎blackpink -text-
+┊༒︎sand -text-
+┊༒︎glue -text-
+┊༒︎1917 -text-
+┊༒︎leaves -text-
+└───〔 *_IYAN BOT INC_* 〕
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8416,67 +8415,67 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'DOWNLOAD MENU')
 ram22 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram22}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
-┌───〔 *_ᴅᴏᴡɴʟᴏᴀᴅᴍᴇɴᴜ_* 〕
-┊🪨ytmp3 -link-
-┊🪨ytmp4 -link-
-┊🪨audio  -link-
-┊🪨play -query-
-┊🪨song -query-
-┊🪨play2 -query-
-┊🪨mediafire -link-
-┊🪨fb -link-
-┊🪨fb2 -link-
-┊🪨ytsvideo -query-
-┊🪨getmusic -query-
-┊🪨getvideo -query-
-┊🪨savefrom -query-
-┊🪨pindl -query-
-┊🪨joox -query-
-┊🪨tiktok -link-
-┊🪨tiktok2 -link-
-┊🪨twitter -link-
-┊🪨twitter2 -link-
-┊🪨tiktok3 -link-
-┊🪨tiktok4 -link-
-┊🪨ig -link-
-┊🪨instagramstory -link-
-┊🪨instagramstory2 -link-
-┊🪨igimage -link-
-┊🪨instagramreal -link-
-┊🪨soundcloud -link-
-┊🪨ytshorts -link-
-┊🪨unma -link-
-┊🪨twitteraudio -link-
-┊🪨ytsaudio -query-
-┊🪨ytsvideo -query-
-┊🪨yts2 -query-
-┊🪨fbdl -link-
-┊🪨fbvideo -link-
-┊🪨get -link-
-┊🪨tiktok5 -link-
-┊🪨titktok3 -link-
-┊🪨tiktokmp3 -link-
-┊🪨ttmp3 -link-
-┊🪨ig2 -link-
-┊🪨git -link-
-┊🪨ig3 -link-
-┊🪨igimage -link-
-┊🪨igtv -link-
-┊🪨fbmp3 -link-
-┊🪨ytdl -link-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉DownloadMenu◉_* 〕
+┊༒︎ytmp3 -link-
+┊༒︎ytmp4 -link-
+┊༒︎audio  -link-
+┊༒︎play -query-
+┊༒︎song -query-
+┊༒︎play2 -query-
+┊༒︎mediafire -link-
+┊༒︎fb -link-
+┊༒︎fb2 -link-
+┊༒︎ytsvideo -query-
+┊༒︎getmusic -query-
+┊༒︎getvideo -query-
+┊༒︎savefrom -query-
+┊༒︎pindl -query-
+┊༒︎joox -query-
+┊༒︎tiktok -link-
+┊༒︎tiktok2 -link-
+┊༒︎twitter -link-
+┊༒︎twitter2 -link-
+┊༒︎tiktok3 -link-
+┊༒︎tiktok4 -link-
+┊༒︎ig -link-
+┊༒︎instagramstory -link-
+┊༒︎instagramstory2 -link-
+┊༒︎igimage -link-
+┊༒︎instagramreal -link-
+┊༒︎soundcloud -link-
+┊༒︎ytshorts -link-
+┊༒︎unma -link-
+┊༒︎twitteraudio -link-
+┊༒︎ytsaudio -query-
+┊༒︎ytsvideo -query-
+┊༒︎yts2 -query-
+┊༒︎fbdl -link-
+┊༒︎fbvideo -link-
+┊༒︎get -link-
+┊༒︎tiktok5 -link-
+┊༒︎titktok3 -link-
+┊༒︎tiktokmp3 -link-
+┊༒︎ttmp3 -link-
+┊༒︎ig2 -link-
+┊༒︎git -link-
+┊༒︎ig3 -link-
+┊༒︎igimage -link-
+┊༒︎igtv -link-
+┊༒︎fbmp3 -link-
+┊༒︎ytdl -link-
+└───〔 *_IYAN BOT INC_* 〕
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8508,59 +8507,59 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'PHOTOFILTER MENU')
 ram30 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram30}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
   
-┌───〔 *_ᴘʜᴏᴛꜰɪʟᴛᴇʀᴍᴇɴᴜ_* 〕
-┊🪨angie -photo-
-┊🪨aria -photo-
-┊🪨attic -photo-
-┊🪨blackandwhite -photo-
-┊🪨chorme1977 -photo-
-┊🪨constrastbandw -photo-
-┊🪨creamy -photo-
-┊🪨duotone -photo-
-┊🪨eva -photo-
-┊🪨goldenhour -photo-
-┊🪨hana -photo-
-┊🪨lavander -photo-
-┊🪨lemonande -photo-
-┊🪨lightleak -photo-
-┊🪨lisa -photo-
-┊🪨lomo -photo-
-┊🪨milk -photo-
-┊🪨molly -photo-
-┊🪨monochrome -photo-
-┊🪨morning -photo-
-┊🪨movie -photo-
-┊🪨orton -photo-
-┊🪨paretro -photo-
-┊🪨perfectbandw -photo-
-┊🪨plumy -photo-
-┊🪨retrolga -photo-
-┊🪨ruby -photo-
-┊🪨sand -photo-
-┊🪨sapphire -photo-
-┊🪨sepia -photo-
-┊🪨softsepia -photo-
-┊🪨solarize -photo-
-┊🪨sphinx -photo-
-┊🪨venus -photo-
-┊🪨japanese -photo-
-┊🪨hdr -photo-
-┊🪨viewfilter -photo-
-┊🪨warmsunset -photo-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉PhotFilterMenu◉_* 〕
+┊༒︎angie -photo-
+┊༒︎aria -photo-
+┊༒︎attic -photo-
+┊༒︎blackandwhite -photo-
+┊༒︎chorme1977 -photo-
+┊༒︎constrastbandw -photo-
+┊༒︎creamy -photo-
+┊༒︎duotone -photo-
+┊༒︎eva -photo-
+┊༒︎goldenhour -photo-
+┊༒︎hana -photo-
+┊༒︎lavander -photo-
+┊༒︎lemonande -photo-
+┊༒︎lightleak -photo-
+┊༒︎lisa -photo-
+┊༒︎lomo -photo-
+┊༒︎milk -photo-
+┊༒︎molly -photo-
+┊༒︎monochrome -photo-
+┊༒︎morning -photo-
+┊༒︎movie -photo-
+┊༒︎orton -photo-
+┊༒︎paretro -photo-
+┊༒︎perfectbandw -photo-
+┊༒︎plumy -photo-
+┊༒︎retrolga -photo-
+┊༒︎ruby -photo-
+┊༒︎sand -photo-
+┊༒︎sapphire -photo-
+┊༒︎sepia -photo-
+┊༒︎softsepia -photo-
+┊༒︎solarize -photo-
+┊༒︎sphinx -photo-
+┊༒︎venus -photo-
+┊༒︎japanese -photo-
+┊༒︎hdr -photo-
+┊༒︎viewfilter -photo-
+┊༒︎warmsunset -photo-
+└───〔 *_IYAN BOT INC_* 〕
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8592,41 +8591,41 @@ case 'nsfwmenu':{
   buffer = await getBuffer(picak+'NSFW MENU')
   ram35 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu =`
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram35}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
   
     
-┌───〔 *_ɴꜱꜰᴡᴍᴇɴᴜ_* 〕
-┊🪨masturbation
-┊🪨jahy
-┊🪨hentai
-┊🪨glasses
-┊🪨gangbang
-┊🪨foot
-┊🪨femdom
-┊🪨cum
-┊🪨ero
-┊🪨cuckhold
-┊🪨blowjob
-┊🪨bdsm
-┊🪨ahegao
-┊🪨ass
-┊🪨orgy
-┊🪨panties
-┊🪨pussy
-┊🪨yuri
-┊🪨thighs
-┊🪨tentacles
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉NsfwMenu◉_* 〕
+┊༒︎masturbation
+┊༒︎jahy
+┊༒︎hentai
+┊༒︎glasses
+┊༒︎gangbang
+┊༒︎foot
+┊༒︎femdom
+┊༒︎cum
+┊༒︎ero
+┊༒︎cuckhold
+┊༒︎blowjob
+┊༒︎bdsm
+┊༒︎ahegao
+┊༒︎ass
+┊༒︎orgy
+┊༒︎panties
+┊༒︎pussy
+┊༒︎yuri
+┊༒︎thighs
+┊༒︎tentacles
+└───〔 *_IYAN BOT INC_* 〕
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
   const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8658,62 +8657,62 @@ case 'animemenu':{
   ram40 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   buffer = await getBuffer(picak+'ANIME MENU')
   anu =`
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram40}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
   
     
-┌───〔 *_ᴀɴɪᴍᴇᴍᴇɴᴜ_* 〕
-┊🪨cry
-┊🪨kill
-┊🪨hug
-┊🪨pat
-┊🪨lick
-┊🪨kiss
-┊🪨bite
-┊🪨yeet
-┊🪨neko
-┊🪨bully
-┊🪨bonk
-┊🪨wink
-┊🪨poke
-┊🪨nom
-┊🪨slap
-┊🪨smile
-┊🪨wave
-┊🪨awoo
-┊🪨blush
-┊🪨smug
-┊🪨glomp
-┊🪨happy
-┊🪨dance
-┊🪨cringe
-┊🪨cuddle
-┊🪨highfive
-┊🪨shinobu
-┊🪨megumin
-┊🪨handhold
-┊🪨animeslap
-┊🪨animepat
-┊🪨animeneko
-┊🪨animehug
-┊🪨animekiss
-┊🪨animewlp
-┊🪨animespank
-┊🪨shinobu2
-┊🪨megumin2
-┊🪨awoo2
-┊🪨animewall2
-┊🪨searchanime -query-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉AnimeMenu◉_* 〕
+┊༒︎cry
+┊༒︎kill
+┊༒︎hug
+┊༒︎pat
+┊༒︎lick
+┊༒︎kiss
+┊༒︎bite
+┊༒︎yeet
+┊༒︎neko
+┊༒︎bully
+┊༒︎bonk
+┊༒︎wink
+┊༒︎poke
+┊༒︎nom
+┊༒︎slap
+┊༒︎smile
+┊༒︎wave
+┊༒︎awoo
+┊༒︎blush
+┊༒︎smug
+┊༒︎glomp
+┊༒︎happy
+┊༒︎dance
+┊༒︎cringe
+┊༒︎cuddle
+┊༒︎highfive
+┊༒︎shinobu
+┊༒︎megumin
+┊༒︎handhold
+┊༒︎animeslap
+┊༒︎animepat
+┊༒︎animeneko
+┊༒︎animehug
+┊༒︎animekiss
+┊༒︎animewlp
+┊༒︎animespank
+┊༒︎shinobu2
+┊༒︎megumin2
+┊༒︎awoo2
+┊༒︎animewall2
+┊༒︎searchanime -query-
+└───〔 *_IYAN BOT INC_* 〕
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
   const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8745,40 +8744,40 @@ case 'convertmenu': {
   ram70 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   buffer = await getBuffer(picak+'CONVERT MENU')
   anu =`
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram70}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
   
     
-┌───〔 *_ᴄᴏɴᴠᴇʀᴛᴍᴇɴᴜ_* 〕
-┊🪨toimg -quote sticker-
-┊🪨togif -quote video-
-┊🪨todocument -media-
-┊🪨bass -audio-
-┊🪨blown -audio-
-┊🪨deep -audio-
-┊🪨earape -audio-
-┊🪨fast -audio-
-┊🪨fat -audio-
-┊🪨nightcore -audio-
-┊🪨reverse -audio-
-┊🪨robot -audio-
-┊🪨slow -audio-
-┊🪨smooth -audio-
-┊🪨squirrel -audio-
-┊🪨sticker -media-
-┊🪨smeme -media-
-┊🪨stickermeme -media-
-┊🪨swm -sticker-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉ConvertMenu◉_* 〕
+┊༒︎toimg -quote sticker-
+┊༒︎togif -quote video-
+┊༒︎todocument -media-
+┊༒︎bass -audio-
+┊༒︎blown -audio-
+┊༒︎deep -audio-
+┊༒︎earape -audio-
+┊༒︎fast -audio-
+┊༒︎fat -audio-
+┊༒︎nightcore -audio-
+┊༒︎reverse -audio-
+┊༒︎robot -audio-
+┊༒︎slow -audio-
+┊༒︎smooth -audio-
+┊༒︎squirrel -audio-
+┊༒︎sticker -media-
+┊༒︎smeme -media-
+┊༒︎stickermeme -media-
+┊༒︎swm -sticker-
+└───〔 *_IYAN BOT INC_* 〕
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
   const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8810,36 +8809,35 @@ case 'toolmenu': {
   buffer = await getBuffer(picak+'TOOL MENU')
   ram90 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu =`
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram90}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
   
     
-┌───〔 *_ᴛᴏᴏʟᴍᴇɴᴜ_* 〕
-┊🪨ip ->-
-┊🪨ipdomain -domain name-
-┊🪨codecolor -text-
-┊🪨hackermaker -pic url-
-┊🪨checknumber -number-
-┊🪨veriphone -number-
-┊🪨weather -place-
-┊🪨attp -text-
-┊🪨ssweb-hp -url-
-┊🪨shortlink -url-
-┊🪨ssweb-pc -url-
-┊🪨shortlinkcuttly -url-
-┊🪨shortlinkisgd -url-
-┊🪨brainly -query-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉ToolsMenu◉_* 〕
+┊༒︎ip ->-
+┊༒︎ipdomain -domain name-
+┊༒︎codecolor -text-
+┊༒︎hackermaker -pic url-
+┊༒︎checknumber -number-
+┊༒︎veriphone -number-
+┊༒︎weather -place-
+┊༒︎attp -text-
+┊༒︎ssweb-hp -url-
+┊༒︎shortlink -url-
+┊༒︎ssweb-pc -url-
+┊༒︎shortlinkcuttly -url-
+┊༒︎shortlinkisgd -url-
+┊༒︎brainly -query-
+└───〔 *_IYAN BOT INC_* 〕
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
   const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -8871,47 +8869,46 @@ case 'searchmenu':{
   buffer = await getBuffer(picak+'SEARCH MENU')
   ram200 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
   anu =`
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram200}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
-┌───〔 *_ꜱᴇᴀʀᴄʜᴍᴇɴᴜ_* 〕
-┊🪨lyrics -query-
-┊🪨linkwa -query-
-┊🪨apk -query-
-┊🪨happymod -query-
-┊🪨apkupro -query-
-┊🪨google -query-
-┊🪨wiki -query-
-┊🪨ytsearch -query-
-┊🪨recipe -query-
-┊🪨playstore -query-
-┊🪨wikimedia -query-
-┊🪨news -query-
-┊🪨news2 -query-
-┊🪨animee -query-
-┊🪨anime -query-
-┊🪨amino -query-
-┊🪨googleimage -query-
-┊🪨apkdone -query-
-┊🪨githubsearch -query->
-┊🪨igsearch -username-
-┊🪨googlenews -query-
-┊🪨gnews -query-
-┊🪨wallpaper -query-
-┊🪨searchgroups -query-
-┊🪨qoutesanime -query-
-┊🪨gmsarena -query-
-└───〔 *_ɪʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+┌───〔 *_◉SearchMenu◉_* 〕
+┊༒︎lyrics -query-
+┊༒︎linkwa -query-
+┊༒︎apk -query-
+┊༒︎happymod -query-
+┊༒︎apkupro -query-
+┊༒︎༒︎google -query-
+┊༒︎wiki -query-
+┊༒︎ytsearch -query-
+┊༒︎recipe -query-
+┊༒︎playstore -query-
+┊༒︎wikimedia -query-
+┊༒︎news -query-
+┊༒︎༒︎news2 -query-
+┊༒︎animee -query-
+┊༒︎anime -query-
+┊༒︎amino -query-
+┊༒︎googleimage -query-
+┊༒︎apkdone -query-
+┊༒︎githubsearch -query->
+┊༒︎igsearch -username-
+┊༒︎googlenews -query-
+┊༒︎gnews -query-
+┊༒︎wallpaper -query-
+┊༒︎searchgroups -query-
+┊༒︎qoutesanime -query-
+┊༒︎gmsarena -query-
+└───〔 *_IYAN BOT INC_* 〕
 
   `
   let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
@@ -8944,31 +8941,30 @@ ZimBotInc.sendMessage(m.chat, { react: { text: `${global.reactmoji}`, key: m.key
 buffer = await getBuffer(picak+'EPHOTO MENU')
 ram250 = `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB`
 anu =`
-┌───〔 *_ɪʏᴀɴ ʙᴏᴛ ᴠ4_* 〕
-┊ᴡᴇʟᴄᴏᴍᴇ
+┌───〔 *_Iyan-Md V4_* 〕
+┊Welcome
 └───────────●
 
-
-┌───〔 _*◉ᴀʙᴏᴜᴛ◉*_ 〕
-┊❗ɴᴀᴍᴇ :  ${pushname}
-┊❕ɴᴜᴍʙᴇʀ : wa.me/${m.sender.split('@')[0]}
-┊❗ʀᴀᴍ : ${ram250}
-┊❗ᴅᴇᴠɪᴄᴇ : ${os.type()}
-┊❕ᴛᴏᴛᴀʟ ᴜsᴇʀs : ${Object.keys(global.db.users).length}
+┌───〔 _*◉About◉*_ 〕
+┊❗Name :  ${pushname}
+┊❕Number : wa.me/${m.sender.split('@')[0]}
+┊❗Ram : ${ram3}
+┊❗Device : ${os.type()}
+┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
 
-┌───〔*_◉ᴇᴘʜᴏᴛᴏ-ᴍᴇɴᴜ◉_*〕
-┊🪨3d-wood
-┊🪨angels-wings
-┊🪨snake-text
-┊🪨redhot-metal2
-┊🪨sandsummer-beach
-┊🪨snow-text
-┊🪨water-3d
-┊🪨water-effect
-┊🪨wet-glass
-┊🪨status-mood2
-┊🪨summerysand
+┌───〔*_◉Ephoto-Menu◉_*〕
+┊༒︎3d-wood
+┊༒︎angels-wings
+┊༒︎snake-text
+┊༒︎redhot-metal2
+┊༒︎sandsummer-beach
+┊༒︎snow-text
+┊༒︎water-3d
+┊༒︎water-effect
+┊༒︎wet-glass
+┊༒︎status-mood2
+┊༒︎summerysand
 └───────────●
 `
 let message = await prepareWAMessageMedia({ image: buffer, jpegThumbnail:buffer }, { upload: ZimBotInc.waUploadToServer })
