@@ -5494,7 +5494,8 @@ case 'swm': case 'stickerwm': case 'wm': {
   }
   }
 break
-case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
+*
+/*case 'smeme': case 'stickmeme': case 'stikmeme': case 'stickermeme': case 'stikermeme': {
 reply(mess.wait)
 if (!/image/.test(mime)) throw respond
 if (!text) throw respond
@@ -5507,6 +5508,21 @@ let fatGans = await floNime(dwnld)
 let smeme = `https://api.memegen.link/images/custom/${encodeURIComponent(atas)}/${encodeURIComponent(bawah)}.png?background=${fatGans.result.url}`
 let FaTiH = await ZimBotInc.sendImageAsSticker(m.chat, smeme, m, { packname: global.packname, author: global.auhor })
 await fs.unlinkSync(FaTiH)
+}
+break*/
+case 'smeme': case 'stickermeme': case 'stickmeme': {
+	   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+let { TelegraPh } = require('./lib/uploader')
+if (!text) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
+if (text.includes('|')) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
+if (!/image/.test(mime)) return reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
+reply(mess.wait)
+mee = await ZimBotInc.downloadAndSaveMediaMessage(quoted)
+mem = await TelegraPh(mee)
+meme = `https://api.memegen.link/images/custom/-/${text}.png?background=${mem}`
+memek = await ZimBotInc.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: global.author })
+await fs.unlinkSync(memek)
 }
 break
 case 'brainly': {
@@ -6868,7 +6884,7 @@ other: function (who = '') {
  case 'public': {
    if (!isCreator) throw global.owner
    ZimBotInc.public = true
-   reply('𝗭𝗶𝗺 𝗯𝗼𝘁 𝗻𝗼𝘄 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗮𝘀 𝗽𝘂𝗯𝗹𝗶𝗰')
+   reply('yan 𝗯𝗼𝘁 𝗻𝗼𝘄 𝘄𝗼𝗿𝗸𝗶𝗻𝗴 𝗮𝘀 𝗽𝘂𝗯𝗹𝗶𝗰')
  }// https://hardianto.xyz/api/rip?image=https://i.imgur.com/rANDwCP.jpeg&apikey=hardianto
  break
  case 'attp': {
