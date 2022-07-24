@@ -454,24 +454,24 @@ async function sendButLoc(from) {
 ]
 bufu = await getBuffer(picak+'RPG GAMES')
 var DADYDR = `
- ┌───〔 *_◉ᴀʙᴏᴜᴛ◉_* 〕
- ┊ *Nᴀᴍᴇ:* ${pushname}
- ┊ *Rᴀɴᴋ:* ${role}
- ┊ *Sᴛᴀᴛᴜꜱ:* ${elit}
- ┊ *Mᴏɴᴇʏ:* $${(getBalance(sender, balance))}
- ┊ *Xᴘ:* ${getLevelingXp(sender)}/${reqXp}
- ┊ *Lᴇᴠᴇʟ:* ${getLevelingLevel(sender)}
+ ┌───〔 *_◉About◉_* 〕
+ ┊ *Name:* ${pushname}
+ ┊ *Rank:* ${role}
+ ┊ *Status:* ${elit}
+ ┊ *Money:* $${(getBalance(sender, balance))}
+ ┊ *Xp:* ${getLevelingXp(sender)}/${reqXp}
+ ┊ *Level:* ${getLevelingLevel(sender)}
  └───────────●
 
- ┌───〔 *_◉ɪɴꜰᴏ◉_* 〕
- ┊ *Mᴏɴᴇʏ:* $${(getBalance(sender, balance))}
- ┊ *Gᴏʟᴅ:* ${getEmas(sender)}
- ┊ *Iʀᴏɴ:* ${getBesi(sender)}
- ┊ *Fɪꜱʜ:* ${getFish(sender)}
- ┊ *Dɪᴀᴍᴏɴᴅ:* ${getDm(sender)}
+ ┌───〔 *_◉Info◉_* 〕
+ ┊ *Money:* $${(getBalance(sender, balance))}
+ ┊ *Gold:* ${getEmas(sender)}
+ ┊ *Iron:* ${getBesi(sender)}
+ ┊ *Fish:* ${getFish(sender)}
+ ┊ *Diamond:* ${getDm(sender)}
  └───────────●
 
- ┌───〔 *_◉ᴍᴇɴᴜ ʀᴘɢ◉_* 〕
+ ┌───〔 *_◉Menu Rpg◉_* 〕
  ┊ ${prefix}joinrpg
  ┊ ${prefix}quest 
  ┊ ${prefix}mining
@@ -482,7 +482,7 @@ var DADYDR = `
  ┊ ${prefix}inventori
  └───────────●
 
- ┌───〔 *_◉Fᴀʀᴍ ʀᴘɢ◉_* 〕
+ ┌───〔 *_◉Farm Rpg◉_* 〕
  ┊ ${prefix}killslime
  ┊ ${prefix}killgoblin
  ┊ ${prefix}killdevil
@@ -491,16 +491,16 @@ var DADYDR = `
  ┊ ${prefix}killdemonking 
  └───────────●
 
- ┌───〔 *_◉Tʀᴀᴅᴇ ʀᴘɢ◉_* 〕
+ ┌───〔 *_◉Trade Rpg◉_* 〕
  ┊ ${prefix}sellikan
  ┊ ${prefix}sellbesi
  ┊ ${prefix}sellemas
  ┊ ${prefix}selldiamond
  └───────────●
 
- ┌───〔 *_ᴛʜᴀɴᴋs ᴛᴏ_* 〕
- ┊ʏᴏᴜʀ ᴄʀᴇᴅɪᴛꜱ
- └───〔 *_ʏᴀɴ ʙᴏᴛ ɪɴᴄ_* 〕
+ ┌───〔 *_Thanks To_* 〕
+ ┊All Friend Bot
+ └───〔 *_IyanMek_* 〕
  `
 let message = await prepareWAMessageMedia({ image: bufu, jpegThumbnail:bufu }, { upload: ZimBotInc.waUploadToServer })
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -2541,7 +2541,7 @@ case 'setppgroup': case 'setgrouppp': case 'setgcpp': case 'setppgrup': case 'se
    case 'setbio':
    reply(mess.wait)
 if (!q) return reply('Send orders *#setbio text*')
-XeonBotInc.setStatus(`${q}`)
+ZimBotInc.setStatus(`${q}`)
 reply(mess.success)
 break
 
@@ -3233,7 +3233,7 @@ break
  case 'linkgroup': case 'grouplink': case 'gclink': case 'linkgc':{ 
    if (!m.isGroup) throw mess.group
    let response = await ZimBotInc.groupInviteCode(m.chat)
-   ZimBotInc.sendText(m.chat, `https://chat.whatsapp.com/${response}\n\nLink of: ${groupMetadata.subject} Group`,m ,{ detectLink: true })
+   ZimBotInc.sendText(m.chat, `https://chat.whatsapp.com/${response}|\n\nLink of: ${groupMetadata.subject} Group`,m ,{ detectLink: true })
 }
    break
  case 'nsfw': {	 			
@@ -8112,7 +8112,7 @@ anu = `
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram4}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8164,7 +8164,7 @@ case 'photooxymenu': {
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram5}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8234,7 +8234,7 @@ anu = `
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram0}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8321,7 +8321,7 @@ anu = `
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram11}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8514,7 +8514,7 @@ anu =`
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram30}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8598,7 +8598,7 @@ case 'nsfwmenu':{
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram35}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8664,7 +8664,7 @@ case 'animemenu':{
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram40}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8751,7 +8751,7 @@ case 'convertmenu': {
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram70}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
@@ -8816,7 +8816,7 @@ case 'toolmenu': {
 ┌───〔 _*◉About◉*_ 〕
 ┊❗Name :  ${pushname}
 ┊❕Number : wa.me/${m.sender.split('@')[0]}
-┊❗Ram : ${ram3}
+┊❗Ram : ${ram90}
 ┊❗Device : ${os.type()}
 ┊❕Total Users : ${Object.keys(global.db.users).length}
 └───────────●
