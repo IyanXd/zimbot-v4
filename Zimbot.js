@@ -8012,7 +8012,7 @@ anu = `
         document: fs.readFileSync('./lib/tes.xlsx'),
         mimetype: dripsee,
         jpegThumbnail:buffer,
-        fileName: `*Runtime* : ${runtime(process.uptime())}`,
+        fileName: `Aktif: ${runtime(process.uptime())}`,
         fileLength: 99999999999999,
         caption: anu,
         footer: `©𝕴𝖞𝖆𝖓𝕸𝖉`,
